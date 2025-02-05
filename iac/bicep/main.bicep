@@ -60,7 +60,7 @@ resource fabric_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = {
   }
 }
 
-
+/*
 // Create purview resource group
 resource purview_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = if (create_purview) {
   name: purviewrg 
@@ -71,6 +71,7 @@ resource purview_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = if (creat
          SME: sme_tag
    }
  }
+*/
 
  // Create audit resource group
 resource audit_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = if(enable_audit) {
@@ -83,6 +84,7 @@ resource audit_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = if(enable_a
    }
  }
 
+/*
 // Deploy Purview using module
 module purview './modules/purview.bicep' = if (create_purview || enable_purview) {
   name: purview_deployment_name
@@ -99,6 +101,7 @@ module purview './modules/purview.bicep' = if (create_purview || enable_purview)
   }
   
 }
+*/
 
 // Deploy Key Vault with default access policies using module
 module kv './modules/keyvault.bicep' = {
