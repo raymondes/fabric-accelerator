@@ -16,10 +16,10 @@ param sme_tag string
 param keyvault_name string
 
 @description('Purview Account name')
-param purview_account_name string
+//param purview_account_name string
 
 @description('Resource group of Purview Account')
-param purviewrg string
+//param purviewrg string
 
 @description('Flag to indicate whether to enable integration of data platform resources with either an existing or new Purview resource')
 param enable_purview bool=true
@@ -64,7 +64,7 @@ resource keyvault 'Microsoft.KeyVault/vaults@2023-07-01' ={
     ]
   }
 }
-
+/*
 // Create Key Vault Access Policies for Purview
 resource existing_purview_account 'Microsoft.Purview/accounts@2021-07-01' existing = if(enable_purview) {
     name: purview_account_name
@@ -84,5 +84,5 @@ resource this_keyvault_accesspolicy 'Microsoft.KeyVault/vaults/accessPolicies@20
     ]
   }
 }
-
+ */ 
 output keyvault_name string = keyvault.name
