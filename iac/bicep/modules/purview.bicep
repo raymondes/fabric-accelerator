@@ -41,6 +41,10 @@ resource purview_account 'Microsoft.Purview/accounts@2024-04-01-preview'= if (cr
   identity:{
     type: 'SystemAssigned'
   }
+  sku: {
+    name: 'Standard'
+    capacity: 1
+  }
   properties:{
     managedResourceGroupName: managed_synapse_rg_name
     publicNetworkAccess: 'Enabled'
