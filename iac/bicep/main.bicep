@@ -100,7 +100,7 @@ module purview './modules/purview.bicep' = if (create_purview || enable_purview)
     owner_tag: owner_tag
     sme_tag: sme_tag
   }
-  
+  dependsOn: purview_rg
 }
 
 
