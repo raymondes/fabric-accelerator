@@ -71,6 +71,7 @@ resource purview_rg  'Microsoft.Resources/resourceGroups@2024-03-01' = if (creat
          SME: sme_tag
    }
  }
+   
 */
 
  // Create audit resource group
